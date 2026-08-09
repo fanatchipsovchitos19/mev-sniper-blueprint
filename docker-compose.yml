@@ -1,0 +1,14 @@
+services:
+  mev-sniper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    environment:
+      - SOLANA_RPC_URL=${SOLANA_RPC_URL:-https://api.mainnet-beta.solana.com}
+    stdin_open: true
+    tty: true
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1

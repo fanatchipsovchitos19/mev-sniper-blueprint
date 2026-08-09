@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package jito;
+
+service MempoolStream {
+    rpc SubscribeMempool (MempoolRequest) returns (stream MempoolUpdate);
+}
+
+message MempoolRequest {
+    string client_id = 1;
+}
+
+message MempoolUpdate {
+    string tx_signature = 1;
+    bytes tx_data = 2;
+    uint64 slot = 3;
+    uint64 timestamp = 4;
+    double priority_fee = 5;
+}

@@ -1,0 +1,9 @@
+@"
+target/
+**/target/
+*.pyc
+__pycache__/
+.git/
+.env
+*.md
+"@ | Out-File -FilePath .dockerignore -Encoding utf8

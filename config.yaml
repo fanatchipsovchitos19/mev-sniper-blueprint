@@ -1,0 +1,13 @@
+solana:
+  rpc_url: "https://api.mainnet-beta.solana.com"
+  helius_api_key: "your-helius-api-key-here"
+  jito_endpoint: "mainnet.block-engine.jito.wtf:443"
+
+ethereum:
+  rpc_url: "https://eth.llamarpc.com"
+  flashbots_relay: "https://relay.flashbots.net"
+
+simulator:
+  min_profit_usd: 1.0
+
+live_mode: false
